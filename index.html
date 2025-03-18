@@ -4,33 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>Web Escritorio</title>
+    <title>Enlaces a mis Webs</title>
     <style>
         body {
             font-family: sans-serif;
             text-align: center;
             padding: 20px;
+            margin: 0; /* Elimina el margen del body */
         }
+
         a {
-            display: block;
+            display: inline-block; /* Cambié block por inline-block */
             margin-bottom: 10px;
             padding: 10px 20px;
             background-color: #4CAF50;
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            width: 100%;   /* Hace que los enlaces ocupen el 100% del ancho disponible */
+            box-sizing: border-box; /* Asegura que el padding no haga que el ancho exceda el contenedor */
         }
+
         a:hover {
             background-color: #45a049;
+        }
+
+        /* Media query para pantallas pequeñas */
+        @media screen and (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            a {
+                padding: 12px 30px;
+                width: auto; /* En pantallas pequeñas, no forzar que los enlaces ocupen todo el ancho */
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Enlaces a Diferentes Páginas</h1>
+    <h1>Enlaces a mis Webs</h1>
     <a href="https://socramazibi.github.io/calculadoraCOE/" target="_blank">Calculadora COE</a>
     <a href="https://socramazibi.github.io/calculadoradias/" target="_blank">Calculadora DÍAS</a>
     <a href="https://socramazibi.github.io/Calculadora-Barco/" target="_blank">Nautical ETA</a>
-    https://socramazibi.github.io/Editor-PDF-online/
     <a href="https://socramazibi.github.io/Editor-PDF-online/" target="_blank">Editor PDF online</a>
 </body>
 </html>
